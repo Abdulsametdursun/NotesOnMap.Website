@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Map Library Link -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- Bootstap link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Mapss</title>
+  </head>
+  <body>
+    <!-- left menu -->
+    <div class="wrapper">
+      <aside>
+        <h1>
+          <span>Notes</span>
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox" class="toggle">
+            <div class="bars" id="bar1"></div>
+            <div class="bars" id="bar2"></div>
+            <div class="bars" id="bar3"></div>
+          </label>
+        </h1>
+        <!-- Form to add -->
+        <form>
+          <div class="field">
+            <label>Add Note</label>
+            <input id="title" placeholder="exp: Work visit" type="text" />
+          </div>
+          <div class="field">
+            <label>Add Date</label>
+            <input type="date" />
+          </div>
+          <div class="field">
+            <label>Status</label>
+            <select>
+              <option value="goto">Visit Place</option>
+              <option value="home">Home</option>
+              <option value="job">Work Place</option>
+              <option value="park">Parking Place</option>
+            </select>
+          </div>
+
+          <div class="buttons">
+            <button type="submit" id="save">Add</button>
+            <button type="button" id="cancel">Cancel</button>
+          </div>
+        </form>
+
+        <!-- List of added notes -->
+        <ul></ul>
+      </aside>
+    </div>
+    <!-- print map from JS-->
+    <div id="map"></div>
+
+    <!-- Map Library Link 2 -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- JS connection -->
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
